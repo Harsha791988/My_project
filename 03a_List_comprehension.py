@@ -51,3 +51,23 @@ word="programs"
 
 chars=[ch for ch in word if ch.lower() in ("a","e","i","o","u")]
 print(chars)
+
+files = ["report.pdf", "image.jpg", "data.xlsx", "notes.pdf"];
+pdf_files = [file for file in files if file.endswith(".pdf")];
+print(pdf_files);
+
+students = [
+    {"name": "Amit", "marks": 92},
+    {"name": "Riya", "marks": 78},
+    {"name": "Karan", "marks": 35},
+    {"name": "Neha", "marks": 65}
+];
+
+results = [
+    f"{student['name']} - Pass"
+    if student["marks"] >= 40
+    else f"{student['name']} - Fail"
+    for student in students
+];
+
+print(results);
